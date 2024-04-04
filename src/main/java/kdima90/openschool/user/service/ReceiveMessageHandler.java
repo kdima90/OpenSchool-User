@@ -15,7 +15,7 @@ public class ReceiveMessageHandler {
     private final SchoolServiceImpl schoolServiceImpl;
 
     @RabbitListener(queues = "openschool_school_openschool_user")
-    public void processOrder(SchoolMessage schoolMessage) {
+    public void processSchoolMessage(SchoolMessage schoolMessage) {
         schoolServiceImpl.saveSchool(schoolMessage);
     }
 }
